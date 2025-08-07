@@ -5,7 +5,7 @@ import os
 
 llm_resto = ChatGroq(
     api_key="",
-    model_name="llama3-70b-8192-verstaile"
+    model_name="meta-llama/llama-4-maverick-17b-128e-instruct",
     temperature = 0.0
 )
 
@@ -31,3 +31,18 @@ prompt_template_resto = PromptTemplate(
 )
 
 chain = LLMChain(llm = llm_resto, prompt = prompt_template_resto)
+
+input_data = {
+    'age': 20,
+    'gender': 'male',
+    'weight': 62,
+    'height': 6,
+    'veg_or_nonveg': 'non-veg',
+    'disease':'none',
+    'region': 'India (Chennai)',
+    'allergics': 'none',
+    'foodtype': 'south-indian'
+}
+
+results = chain.run(input_data)
+print(results)
