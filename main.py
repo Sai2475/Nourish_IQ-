@@ -6,7 +6,12 @@ import os
 llm = ChatGroq(
     api_key="",
     model_name="llama3-70b-8192-verstaile"
+    temperature = 0.0
 )
 
-response = llm.invoke("Tell me a joke")
-print(response)
+prompt_template_resto = PromptTemplate(
+    input_variables=['age','gender','weight','height','veg_or_nonveg','disease','region','foodtype'],
+    template=(
+        
+    )
+)
