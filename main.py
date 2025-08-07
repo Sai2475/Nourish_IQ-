@@ -45,4 +45,11 @@ input_data = {
 }
 
 results = chain.run(input_data)
-print(results)
+
+restaurant_names = re.findall(r'Restaurants:\s*(.*?)\n\n', results, re.DOTALL)
+breakfast_names = re.findall(r'Breakfast:\s*(.*?)\n\n', results, re.DOTALL)
+dinner_names = re.findall(r'Dinner:\s*(.*?)\n\n', results, re.DOTALL)
+workout_names = re.findall(r'Workouts:\s*(.*?)\n\n', results, re.DOTALL)
+
+def clean_list(block):
+    return [line.strip("- ")for line in block.strip().split("\n") if line.strip()]
