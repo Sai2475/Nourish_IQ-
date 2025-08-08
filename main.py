@@ -2,6 +2,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain_groq import ChatGroq
 import os
+import re
 
 llm_resto = ChatGroq(
     api_key="",
@@ -53,3 +54,14 @@ workout_names = re.findall(r'Workouts:\s*(.*?)\n\n', results, re.DOTALL)
 
 def clean_list(block):
     return [line.strip("- ")for line in block.strip().split("\n") if line.strip()]
+
+restaurant_names = clean_list(restaurant_names[0]) if restaurant_names else []
+breakfast_names = clean_list(breakfast_names[0]) if breakfast_names else []
+dinner_names = clean_list(dinner_names[0]) if dinner_names else []
+workout_names = clean_list(workout_names[0]) if workout_names else []
+
+
+print("\n Recommended Restaurants : \n", "\n".join(restaurant_names))
+print("\n Recommended Breakfast : \n", "\n".join(breakfast_names))
+print("\n Recommended Dinner : \n", "\n".join(dinner_names))
+print("\n Recommended Workouts : \n", "\n".join(workout_names))
