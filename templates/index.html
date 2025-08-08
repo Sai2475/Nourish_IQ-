@@ -1,0 +1,87 @@
+<!-- landing.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Nourish IQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-green-300 text-gray-900">
+    <div class="min-h-screen flex flex-col justify-center items-center px-6">
+        <div class="text-center space-y-6">
+            <h1 class="text-5xl font-bold text-green-800">🥗 Welcome to Nourish IQ</h1>
+            <p class="text-xl max-w-2xl mx-auto text-gray-700">
+                Your AI-powered health companion for personalized diet plans, restaurant picks, and daily workouts tailored to your lifestyle and preferences.
+            </p>
+            <a href="/" class="inline-block bg-green-600 text-white px-6 py-3 rounded-xl text-lg font-semibold shadow hover:bg-green-700 transition">
+                Get Started →
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- index.html (enhanced) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NutriNavigator: Personalized AI Recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <div class="max-w-4xl mx-auto my-10 p-8 bg-white rounded-2xl shadow-xl">
+        <h1 class="text-4xl font-extrabold text-center text-green-700 mb-6">🥦 Nourish IQ: Your Health Companion</h1>
+        <p class="text-center text-gray-600 mb-8 text-lg">Enter your details to get personalized diet, restaurant, and workout recommendations powered by AI</p>
+
+        <form action="/recommend" method="post" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block mb-1 font-medium">Age</label>
+                    <input type="number" name="age" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                </div>
+                <div>
+                    <label class="block mb-1 font-medium">Gender</label>
+                    <select name="gender" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block mb-1 font-medium">Weight (kg)</label>
+                    <input type="number" name="weight" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                </div>
+                <div>
+                    <label class="block mb-1 font-medium">Height (m)</label>
+                    <input type="number" step="0.01" name="height" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                </div>
+                <div>
+                    <label class="block mb-1 font-medium">Diet Type</label>
+                    <select name="veg_or_nonveg" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                        <option value="veg">Vegetarian</option>
+                        <option value="nonveg">Non-Vegetarian</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block mb-1 font-medium">Region</label>
+                    <input type="text" name="region" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                </div>
+                <div>
+                    <label class="block mb-1 font-medium">Allergies</label>
+                    <input type="text" name="allergics" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                </div>
+            </div>
+            <div>
+                <label class="block mb-1 font-medium">Preferred Food Type</label>
+                <input type="text" name="foodtype" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-bold hover:bg-green-700 transition">
+                    🧠 Get My Recommendations
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

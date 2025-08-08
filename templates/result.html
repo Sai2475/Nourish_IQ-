@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your AI Recommendations | Nourish IQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-tr from-white to-green-100 text-gray-900 font-sans">
+
+    <div class="max-w-5xl mx-auto my-10 bg-white rounded-2xl shadow-xl p-10 space-y-10">
+        <h2 class="text-4xl font-extrabold text-center text-green-700">🎯 Your Personalized AI Recommendations</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <h3 class="text-2xl font-bold border-b pb-2 text-green-800">🍽️ Recommended Restaurants</h3>
+                <ul class="list-disc pl-6 mt-3 text-gray-700">
+                    {% for i in restaurant_names %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold border-b pb-2 text-green-800">🍳 Breakfast Suggestions</h3>
+                <ul class="list-disc pl-6 mt-3 text-gray-700">
+                    {% for i in breakfast_names %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold border-b pb-2 text-green-800">🌙 Dinner Ideas</h3>
+                <ul class="list-disc pl-6 mt-3 text-gray-700">
+                    {% for i in dinner_names %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold border-b pb-2 text-green-800">💪 Workout Routines</h3>
+                <ul class="list-disc pl-6 mt-3 text-gray-700">
+                    {% for i in workout_names %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="/" class="inline-block mt-8 bg-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700">← Start Again</a>
+        </div>
+    </div>
+
+</body>
+</html>
