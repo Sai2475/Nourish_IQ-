@@ -5,8 +5,8 @@ import os
 import re
 
 llm_resto = ChatGroq(
-    api_key="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",
-    model_name="meta-llama/llama-4-maverick-17b-128e-instruct",
+    api_key="",
+    model_name="",
     temperature = 0.0
 )
 
