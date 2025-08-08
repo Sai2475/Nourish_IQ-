@@ -5,13 +5,13 @@ import os
 import re
 
 llm_resto = ChatGroq(
-    api_key="",
+    api_key="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",
     model_name="meta-llama/llama-4-maverick-17b-128e-instruct",
     temperature = 0.0
 )
 
 prompt_template_resto = PromptTemplate(
-    input_variables=['age','gender','weight','height','veg_or_nonveg','disease','region','foodtype'],
+    input_variables=['age','gender','weight','height','veg_or_nonveg','region','foodtype'],
     template=(
         "Diet Recommendation System:\n"
         "I want you to provide output in the following format using the input criteria:\n\n"
@@ -25,7 +25,7 @@ prompt_template_resto = PromptTemplate(
         "- workout1\n- workout2\n- workout3\n- workout4\n- workout5\n- workout6\n\n"
         "Criteria:\n"
         "Age: {age}, Gender: {gender}, Weight: {weight} kg, Height: {height} ft, "
-        "Vegetarian: {veg_or_nonveg}, Disease: {disease}, Region: {region}, "
+        "Vegetarian: {veg_or_nonveg}, Region: {region}, "
         "Allergics: {allergics}, Food Preference: {foodtype}.\n"
 
  )
@@ -39,7 +39,6 @@ input_data = {
     'weight': 62,
     'height': 6,
     'veg_or_nonveg': 'non-veg',
-    'disease':'none',
     'region': 'India (Chennai)',
     'allergics': 'none',
     'foodtype': 'south-indian'

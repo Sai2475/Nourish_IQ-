@@ -1,0 +1,28 @@
+<!-- landing.html (updated with animation) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Nourish IQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-green-300 text-gray-900">
+    <div class="min-h-screen flex flex-col justify-center items-center px-6">
+        <div class="text-center space-y-6 animate-fade-up" style="animation: fadeUp 1s ease-out forwards;">
+            <h1 class="text-5xl font-bold text-green-800">🥗 Welcome to Nourish IQ</h1>
+            <p class="text-xl max-w-2xl mx-auto text-gray-700">
+                Your AI-powered health companion for personalized diet plans, restaurant picks, and daily workouts tailored to your lifestyle and preferences.
+            </p>
+            <a href="/" class="inline-block bg-green-600 text-white px-6 py-3 rounded-xl text-lg font-semibold shadow hover:bg-green-700 transition">
+                Get Started →
+            </a>
+        </div>
+    </div>
+</body>
+</html>
